@@ -48,6 +48,12 @@ export default {
 
                 },
                 {
+                    name: 'Emails',
+                    icon: 'bx bxs-envelope',
+                    mainTitle: "Emailings",
+                    routeName: 'email'
+                },
+                {
                     name: 'Dashboards Panel',
                     icon: 'bx bxs-dashboard',
                     mainTitle: 'Dashboards',

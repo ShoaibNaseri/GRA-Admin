@@ -34,6 +34,17 @@ import UniversitySingle from "@/pages/university/UniversitySingle.vue";
 import ProgramSingle from "@/pages/program/ProgramSingle.vue";
 import StudentWalletSingle from "@/pages/studentWallet/wallet/SingleWallet.vue";
 import EmployeeWalletSingle from "@/pages/employeeWallet/wallet/SingleWallet.vue";
+import EmailLayout from "@/pages/email/EmailLayout.vue";
+import EmailView from "@/pages/email/EmailInbox.vue";
+import EmailSent from "@/pages/email/EmailSent.vue";
+import EmailDraft from "@/pages/email/EmailDraft.vue";
+import EmailSpam from "@/pages/email/EmailSpam.vue";
+import EmailImportant from "@/pages/email/EmailImportant.vue";
+import EmailTrash from "@/pages/email/EmailTrash.vue";
+import EmailArchive from "@/pages/email/EmailArchive.vue";
+import EmailStarred from "@/pages/email/EmailStarred.vue";
+import EmailSetting from "@/pages/email/EmailSetting.vue";
+import EmailSignle from "@/pages/email/EmailSingle.vue";
 
 import  Home from "@/Home.vue";
 
@@ -269,6 +280,69 @@ const routes = [
         name:'employeeWall.all.widthraw',
         component:EmpWidthrawView,
         meta:{requiresAuth:true}
+    },
+    {
+        path:'/email',
+        name:'email',
+        component:EmailLayout,
+        meta:{requiresAuth:true},
+        children:[
+            {
+                path:"/",
+                name:'email.inbox',
+                component:EmailView,
+            },
+            {
+                path:'/all',
+                name:'email.all'
+            },
+            {
+                path:'/sent',
+                name:'email.sent',
+                component:EmailSent
+            },
+            {
+                path:'/draft',
+                name:'email.draft',
+                component:EmailDraft
+            },
+            {
+                path:'/spam',
+                name:'email.spam',
+                component:EmailSpam
+            },
+            {
+                path:'/important',
+                name:'email.important',
+                component:EmailImportant
+            },
+            {
+                path:'/trash',
+                name:'email.trash',
+                component:EmailTrash,
+            },
+            {
+                path:'/archive',
+                name:'email.archive',
+                component:EmailArchive
+            },
+            {
+                path:'/starred',
+                name:'email.starred',
+                component:EmailStarred
+
+            },
+            {
+                path:'/setting',
+                name:'email.setting',
+                component:EmailSetting
+            },
+            {
+                path:'/email/single',
+                name:'email.single',
+                component:EmailSignle
+            }
+        ]
     }
 
 ]
