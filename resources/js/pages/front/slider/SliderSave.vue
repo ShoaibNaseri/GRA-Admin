@@ -158,7 +158,6 @@ export default {
         if (this.$route.params.id) {
             this.editMode = true;
             let x = this.$route.params.id;
-            console.log(x);
             axios.get(`/api/slider/${this.$route.params.id}/edit`)
                 .then(response => {
                     this.slides = response.data;
