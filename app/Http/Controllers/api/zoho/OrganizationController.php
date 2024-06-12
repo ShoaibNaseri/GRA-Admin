@@ -20,12 +20,11 @@ class OrganizationController extends Controller
     }
     private function getAccessToken()
     {
-        $clientId = '1000.YVB21Z34YWEEW84IBXBJAS6MG46V1Z';
-        $clientIdSecret = '7b4a50953ecb74f8ab3f976852088fd00a7faea42e';
-        $refreshToken = '1000.4d5735e72ea22d525e970a3604fe6ffd.47d8161c30106f7fe69c976b937c91af';
-        $grant_type = 'refresh_token';
-
-        $response =  Http::post('https://accounts.zoho.com/oauth/v2/token?refresh_token=' . $refreshToken . '&client_id=' . $clientId . '&client_secret=' . $clientIdSecret . '&grant_type=' . $grant_type);
+        $clientId = getenv('CLIENT_ID');
+        $clientIdSecret = getenv('CLIENT_SECRET');
+        $refreshToken = getenv('REFRESH_TOKEN');
+        $grantType = getenv('GRANT_TYPE');
+        $response =  Http::post('https://accounts.zoho.com/oauth/v2/token?refresh_token=' . $refreshToken . '&client_id=' . $clientId . '&client_secret=' . $clientIdSecret . '&grant_type=' . $grantType);
         $respone = json_decode($response)->access_token;
         return $respone;
     }
