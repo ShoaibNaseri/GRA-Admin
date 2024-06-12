@@ -45,6 +45,7 @@ import EmailArchive from "@/pages/email/EmailArchive.vue";
 import EmailStarred from "@/pages/email/EmailStarred.vue";
 import EmailSetting from "@/pages/email/EmailSetting.vue";
 import EmailSignle from "@/pages/email/EmailSingle.vue";
+import OrganizationView from "@/pages/integrations/zohoMail/organization/OrganizationView.vue";
 
 import  Home from "@/Home.vue";
 
@@ -57,6 +58,13 @@ const routes = [
     //     name:'admin.index',
     //     component:Home,
     // },
+
+    // Zoho Integration System
+    {
+        path:'/integration/zoho/organization',
+        name:'organization.index',
+        component:OrganizationView
+    },
     {
         path:"/test",
         name:"Test",

@@ -16,19 +16,19 @@ class Appliedprogram extends Model
     {
         return $this->belongsTo(Scholarship::class);
     }
-    // public function markAsInprogress()
-    // {
-    //     $this->applicationStatus = StudentAppliedProgramStatus::INPROGRESS;
-    //     $this->save();
-    // }
-    // public function markAsCompleted()
-    // {
-    //     $this->applicationStatus = StudentAppliedProgramStatus::COMPLETED;
-    //     $this->save();
-    // }
-    // public function markAsRejected()
-    // {
-    //     $this->applicationStatus = StudentAppliedProgramStatus::REJECTED;
-    //     $this->save();
-    // }
+    public function markAsInprogress()
+    {
+        $this->applicationStatus = StudentAppliedProgramStatus::INPROGRESS;
+        $this->save();
+    }
+    public function markAsCompleted()
+    {
+        $this->applicationStatus = StudentAppliedProgramStatus::COMPLETED;
+        $this->save();
+    }
+    public function markAsRejected()
+    {
+        $this->applicationStatus = StudentAppliedProgramStatus::REJECTED;
+        $this->save();
+    }
 }

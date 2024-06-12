@@ -19,8 +19,11 @@ use App\Http\Controllers\admin\student\WalletController;
 use App\Http\Controllers\admin\StudentController;
 use App\Http\Controllers\admin\SubscriberController;
 use App\Http\Controllers\admin\UniversityController;
+use App\Http\Controllers\api\zoho\OrganizationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+
 
 
 //Admin Auth
@@ -81,3 +84,10 @@ Route::get('/admin/getAllEmpWallets', [EmployeeWalletController::class, 'index']
 Route::get('/admin/getSingelEmployeeWallet/{id}', [EmployeeWalletController::class, 'getSingle']);
 Route::get('/admin/employee/getAllTransaciton', [EmployeeWalletController::class, 'getAllTransactions']);
 Route::get('/admin/employee/getAllWidthraw', [EmployeeWalletController::class, 'getAllWidthraws']);
+
+
+
+
+//ZOHO MAIL
+
+Route::get('/admin/zoho/ogranization', [OrganizationController::class, 'getOrganizationData']);

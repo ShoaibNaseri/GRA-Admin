@@ -85,6 +85,17 @@ export default {
                     ]
                 },
                 {
+                    name: 'Zoho-Mail-Integeration',
+                    icon: 'bx bxs-bell-ring',
+                    mainTitle: 'Integrations',
+                    children: [
+                        {
+                            name: 'Organizations - API',
+                            routeName: 'organization.index'
+                        }
+                    ]
+                },
+                {
                     name: "Notifications",
                     icon: 'bx bxs-bell-ring',
                     mainTitle: 'Admin Panle',
